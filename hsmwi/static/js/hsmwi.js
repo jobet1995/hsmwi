@@ -6,12 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const newsletterForm = document.querySelector("#newsletter-form");
   let loadingSpinner = document.querySelector(".loading-spinner");
 
-  if (!loadingSpinner) {
-    loadingSpinner = document.createElement("div");
-    loadingSpinner.className = "loading-spinner";
-    loadingSpinner.innerHTML = "<div></div><div></div><div></div><div></div>";
-    document.body.appendChild(loadingSpinner);
-  }
+  // Add calming hover effects to wellness cards
+  const wellnessCards = document.querySelectorAll('.wellness-card');
+  wellnessCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'all 0.3s ease-in-out';
+      this.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.05)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+    });
+  });
 
   function setNavbar() {
     if (!navbar) return;
@@ -106,5 +114,136 @@ document.addEventListener("DOMContentLoaded", function () {
   focusable.forEach((el) => {
     el.addEventListener("focus", () => el.classList.add("focused"));
     el.addEventListener("blur", () => el.classList.remove("focused"));
+  });
+  
+  // Add gentle hover effects to buttons
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-1px)';
+      this.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+      this.style.transition = 'all 0.3s ease-in-out';
+    });
+    
+    button.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = 'none';
+    });
+  });
+  
+  // Add subtle floating animation to elements with float class
+  const floatElements = document.querySelectorAll('.animate-float');
+  floatElements.forEach(el => {
+    el.style.transition = 'transform 0.5s ease-in-out';
+    
+    el.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-3px)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+  
+  // Implement Intersection Observer for fade-in and slide-up animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe elements with fade-in-slide-up class
+  const fadeElements = document.querySelectorAll('.fade-in-slide-up');
+  fadeElements.forEach(element => {
+    observer.observe(element);
+  });
+  
+  // Add thematic interactions based on keywords
+  // Calmness interaction - slow, smooth transitions
+  const calmElements = document.querySelectorAll('.calmness, .btn-calmness');
+  calmElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.8s ease-in-out';
+    });
+  });
+  
+  // Empathy interaction - gentle color shifts
+  const empathyElements = document.querySelectorAll('.empathy, .btn-empathy');
+  empathyElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.05)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
+  });
+  
+  // Hope interaction - subtle lightening effect
+  const hopeElements = document.querySelectorAll('.hope, .btn-hope');
+  hopeElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.1)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
+  });
+  
+  // Wellness interaction - gentle pulse
+  const wellnessElements = document.querySelectorAll('.wellness, .btn-wellness');
+  wellnessElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.animation = 'gentlePulse 2s ease-in-out infinite';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.animation = '';
+    });
+  });
+  
+  // Connection interaction - subtle border glow
+  const connectionElements = document.querySelectorAll('.connection, .btn-connection');
+  connectionElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 0 8px rgba(156, 39, 176, 0.3)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '';
+    });
+  });
+  
+  // Safety interaction - protective shield effect
+  const safetyElements = document.querySelectorAll('.safety, .btn-safety');
+  safetyElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 0 10px rgba(255, 152, 0, 0.3)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '';
+    });
+  });
+  
+  // Balance interaction - centered stability
+  const balanceElements = document.querySelectorAll('.balance, .btn-balance');
+  balanceElements.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-1px) scale(1.01)';
+    });
+    
+    el.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+    });
   });
 });

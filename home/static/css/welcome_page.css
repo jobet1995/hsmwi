@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
 html {
     box-sizing: border-box;
 }
@@ -13,19 +15,22 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     padding: 0 15px;
-    color: #231f20;
-    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-    line-height: 1.25;
+    color: #1e293b;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #FFFBF3; /* Light cream background */
 }
 
 a {
     background-color: transparent;
-    color: #308282;
-    text-decoration: underline;
+    color: #355C7D; /* Deep teal for professionalism */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #ea1b10;
+    color: #A8E6CF; /* Soft mint green for calm and healing */
+    text-decoration: underline;
 }
 
 h1,
@@ -40,6 +45,14 @@ ul {
     font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #355C7D; /* Deep teal for professionalism */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
 svg:not(:root) {
     overflow: hidden;
 }
@@ -50,7 +63,7 @@ svg:not(:root) {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .logo {
@@ -83,16 +96,16 @@ svg:not(:root) {
 
 @keyframes pos {
     0%, 100% {
-        transform: rotate(-6deg);
+        transform: rotate(-3deg);
     }
     50% {
-        transform: rotate(6deg);
+        transform: rotate(3deg);
     }
 }
 
 .egg {
-    fill: #43b1b0;
-    animation: pos 3s ease infinite;
+    fill: #355C7D; /* Deep teal for professionalism */
+    animation: pos 6s ease infinite;
     transform: translateY(50px);
     transform-origin: 50% 80%;
 }
@@ -108,13 +121,14 @@ svg:not(:root) {
 
 .main-text p {
     margin: 15px auto 0;
+    color: #64748b;
 }
 
 .footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #e2e8f0;
     padding: 10px;
 }
 
@@ -123,15 +137,24 @@ svg:not(:root) {
     padding: 10px 10px 10px 34px;
     position: relative;
     text-decoration: none;
+    border-radius: 1rem; /* Rounded corners for kindness */
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.option:hover {
+    background-color: #A0CED9; /* Pale sky blue for trust and peace */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .option svg {
     width: 24px;
     height: 24px;
-    fill: gray;
-    border: 1px solid #d9d9d9;
+    fill: #355C7D; /* Deep teal for professionalism */
+    border: 1px solid #e2e8f0;
     padding: 5px;
-    border-radius: 100%;
+    border-radius: 100%; /* Circular shape */
     top: 10px;
     inset-inline-start: 0;
     position: absolute;
@@ -139,12 +162,13 @@ svg:not(:root) {
 
 .option h2 {
     font-size: 19px;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #355C7D; /* Deep teal for professionalism */
 }
 
 .option p {
     padding-top: 3px;
-    color: #231f20;
+    color: #64748b;
     font-size: 15px;
     font-weight: 300;
 }

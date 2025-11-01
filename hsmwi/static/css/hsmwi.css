@@ -2,25 +2,25 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: #1e293b;
-  --card: #ffffff;
+  --background: #FFFBF3; /* Light cream for warmth */
+  --foreground: #1e293b; /* Dark slate for readability */
+  --card: #ffffff; /* Clean white cards */
   --card-foreground: #1e293b;
   --popover: #ffffff;
   --popover-foreground: #242424;
-  --primary: #0f766e;
+  --primary: #355C7D; /* Deep teal for professionalism */
   --primary-foreground: #ffffff;
-  --secondary: #e0f2f1;
-  --secondary-foreground: #0f766e;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --accent: #0d9488;
-  --accent-foreground: #ffffff;
+  --secondary: #A0CED9; /* Pale sky blue for trust and peace */
+  --secondary-foreground: #355C7D;
+  --muted: #FFFBF3; /* Light cream for warmth */
+  --muted-foreground: #64748b; /* Muted gray for secondary text */
+  --accent: #A8E6CF; /* Soft mint green for calm and healing */
+  --accent-foreground: #355C7D;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
+  --border: #e2e8f0; /* Light border color */
   --input: transparent;
-  --input-background: #f8fafc;
+  --input-background: #FFFBF3;
   --switch-background: #cbd5e1;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
@@ -30,43 +30,64 @@
   --chart-3: #5a7bb5;
   --chart-4: #aed67e;
   --chart-5: #e8c467;
-  --radius: 0.5rem;
+  --radius: 1rem; /* Rounded corners for kindness */
   --sidebar: #fafafa;
   --sidebar-foreground: #242424;
-  --sidebar-primary: #030213;
+  --sidebar-primary: #355C7D;
   --sidebar-primary-foreground: #fafafa;
   --sidebar-accent: #f7f7f7;
   --sidebar-accent-foreground: #343434;
   --sidebar-border: #ebebeb;
   --sidebar-ring: #b4b4b4;
   
-  /* MindHaven professional colors */
-  --mindhaven-primary: #0f766e;
-  --mindhaven-secondary: #0d9488;
-  --mindhaven-accent: #14b8a6;
-  --mindhaven-light: #f0fdfa;
-  --mindhaven-muted: #ccfbf1;
+  /* Healing Through Calm Design variables */
+  --calm-warm: #FFFBF3; /* Cream for warmth and comfort */
+  --calm-success: #A8E6CF; /* Success color */
+  --calm-warning: #f59e0b; /* Warning color */
+  --calm-error: #dc2626; /* Error color */
+  
+  /* Thematic color variables */
+  --calmness: #e0f7fa; /* Light blue for calmness */
+  --empathy: #fce4ec; /* Soft pink for empathy */
+  --hope: #e3f2fd; /* Light blue for hope */
+  --wellness: #e8f5e9; /* Light green for wellness */
+  --connection: #f3e5f5; /* Light purple for connection */
+  --safety: #fff3e0; /* Light orange for safety */
+  --balance: #fafafa; /* Light gray for balance */
+  
+  /* Spacing variables for consistent padding/margin */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Transition variables for smooth animations */
+  --transition-default: all 0.3s ease-in-out;
+  --transition-float: transform 0.5s ease-in-out;
 }
 
 [data-theme="dark"] {
-  --background: #242424;
-  --foreground: #fafafa;
-  --card: #242424;
-  --card-foreground: #fafafa;
-  --popover: #242424;
-  --popover-foreground: #fafafa;
-  --primary: #fafafa;
-  --primary-foreground: #343434;
-  --secondary: #454545;
-  --secondary-foreground: #fafafa;
-  --muted: #454545;
-  --muted-foreground: #b4b4b4;
-  --accent: #454545;
-  --accent-foreground: #fafafa;
-  --destructive: #e5534d;
-  --destructive-foreground: #a2403c;
-  --border: #454545;
-  --input: #454545;
+  --background: #0f172a; /* Dark blue background for night mode */
+  --foreground: #f8fafc; /* Light text for contrast */
+  --card: #1e293b; /* Slightly lighter card background */
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #355C7D; /* Deep teal for professionalism */
+  --primary-foreground: #ffffff;
+  --secondary: #0f172a; /* Darker secondary for depth */
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b; /* Muted dark background */
+  --muted-foreground: #94a3b8; /* Muted gray text */
+  --accent: #A8E6CF; /* Soft mint green for calm and healing */
+  --accent-foreground: #ffffff;
+  --destructive: #f87171; /* Softer red for errors */
+  --destructive-foreground: #ffffff;
+  --border: #334155; /* Darker border color */
+  --input: #1e293b;
   --ring: #707070;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
@@ -75,14 +96,29 @@
   --chart-3: #c5996d;
   --chart-4: #a073cf;
   --chart-5: #a57dca;
-  --sidebar: #343434;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #7d65c9;
-  --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #454545;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: #454545;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #355C7D;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #334155;
   --sidebar-ring: #707070;
+  
+  /* Dark mode healing colors */
+  --calm-warm: #78350f; /* Darker warm color for night mode */
+  --calm-success: #A8E6CF; /* Soft mint green for success */
+  --calm-warning: #fbbf24; /* Brighter yellow for warnings */
+  --calm-error: #f87171; /* Softer red for errors */
+  
+  /* Dark mode thematic color variables */
+  --calmness: #01579b; /* Darker blue for calmness */
+  --empathy: #880e4f; /* Darker pink for empathy */
+  --hope: #0d47a1; /* Darker blue for hope */
+  --wellness: #1b5e20; /* Darker green for wellness */
+  --connection: #4a148c; /* Darker purple for connection */
+  --safety: #e65100; /* Darker orange for safety */
+  --balance: #212121; /* Darker gray for balance */
 }
 
 /* Base styles */
@@ -95,12 +131,28 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6; /* Improved readability */
+  transition: var(--transition-default); /* Smooth theme transitions */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background-color: var(--background);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0;
 }
 
 /**
  * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
  */
 :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+  /* This section is now handled by the enhanced global styles above */
   h1 {
     font-size: 1.5rem;
     font-weight: var(--font-weight-medium);
@@ -158,11 +210,62 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
+/* Enhanced heading styles for healing theme */
+:where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+    color: var(--primary); /* Use primary teal color */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6 {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin-bottom: var(--spacing-md);
+    color: var(--foreground);
+  }
+  
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition-default);
+  }
+  
+  a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+}
+
+/* Custom animations for healing experience */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -172,47 +275,514 @@ html {
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards; /* Gentler effect for emotional safety */
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite; /* Slower float for calming effect */
 }
 
-/* Professional gradients */
+/* Additional calming animations */
+.animate-gentle-pulse {
+  animation: gentlePulse 4s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Professional gradients for healing theme */
 .gradient-mindhaven {
-  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  background: linear-gradient(135deg, var(--mindhaven-secondary) 0%, var(--mindhaven-primary) 100%);
 }
 
 .gradient-soft {
-  background: linear-gradient(135deg, #f0fdfa 0%, #e0f2f1 100%);
+  background: linear-gradient(135deg, var(--muted) 0%, var(--secondary) 100%);
 }
 
-/* Professional utilities */
+.gradient-warm {
+  background: linear-gradient(135deg, var(--calm-warm) 0%, var(--accent) 100%);
+}
+
+.gradient-healing {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+/* Thematic gradients reflecting keywords */
+.gradient-calmness {
+  background: linear-gradient(135deg, #e0f7fa 0%, #a8e6cf 100%); /* Calmness */
+}
+
+.gradient-empathy {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); /* Empathy */
+}
+
+.gradient-hope {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); /* Hope */
+}
+
+.gradient-wellness {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); /* Wellness */
+}
+
+.gradient-connection {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); /* Connection */
+}
+
+.gradient-safety {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); /* Safety */
+}
+
+.gradient-balance {
+  background: linear-gradient(135deg, #fafafa 0%, #eeeeee 100%); /* Balance */
+}
+
+/* Professional utilities with healing focus */
 .text-balance {
   text-wrap: balance;
 }
 
+/* Calming section spacing with purposeful whitespace */
 .section-padding {
-  padding: 5rem 1rem;
+  padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .section-padding {
-    padding: 6rem 1.5rem;
+    padding: var(--spacing-3xl) var(--spacing-xl);
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 8rem 2rem;
+    padding: var(--spacing-3xl) var(--spacing-2xl);
   }
+}
+
+/* Hero banner with soft gradient */
+.hero-banner {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-banner {
+    padding: 6rem 2rem;
+  }
+}
+
+.hero-message {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .hero-message {
+    font-size: 3rem;
+  }
+}
+
+/* Thematic hero banners */
+.hero-banner.calmness {
+  background: linear-gradient(135deg, var(--calmness) 0%, #a8e6cf 100%);
+}
+
+.hero-banner.empathy {
+  background: linear-gradient(135deg, var(--empathy) 0%, #f8bbd0 100%);
+}
+
+.hero-banner.hope {
+  background: linear-gradient(135deg, var(--hope) 0%, #bbdefb 100%);
+}
+
+.hero-banner.wellness {
+  background: linear-gradient(135deg, var(--wellness) 0%, #c8e6c9 100%);
+}
+
+.hero-banner.connection {
+  background: linear-gradient(135deg, var(--connection) 0%, #e1bee7 100%);
+}
+
+.hero-banner.safety {
+  background: linear-gradient(135deg, var(--safety) 0%, #ffe0b2 100%);
+}
+
+.hero-banner.balance {
+  background: linear-gradient(135deg, var(--balance) 0%, #eeeeee 100%);
+}
+
+/* Healing-focused utility classes */
+.bg-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-muted {
+  background-color: var(--muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--muted-foreground);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+/* Thematic utility classes */
+.bg-calmness {
+  background-color: var(--calmness);
+}
+
+.bg-empathy {
+  background-color: var(--empathy);
+}
+
+.bg-hope {
+  background-color: var(--hope);
+}
+
+.bg-wellness {
+  background-color: var(--wellness);
+}
+
+.bg-connection {
+  background-color: var(--connection);
+}
+
+.bg-safety {
+  background-color: var(--safety);
+}
+
+.bg-balance {
+  background-color: var(--balance);
+}
+
+.text-calmness {
+  color: var(--calmness);
+}
+
+.text-empathy {
+  color: var(--empathy);
+}
+
+.text-hope {
+  color: var(--hope);
+}
+
+.text-wellness {
+  color: var(--wellness);
+}
+
+.text-connection {
+  color: var(--connection);
+}
+
+.text-safety {
+  color: var(--safety);
+}
+
+.text-balance {
+  color: var(--balance);
+}
+
+/* Wellness card component with purposeful whitespace */
+.wellness-card {
+  background-color: var(--card);
+  border-radius: var(--radius); /* Consistent rounded corners */
+  padding: var(--spacing-xl);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: var(--transition-default);
+  border: 1px solid var(--border);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  transition: all 0.5s ease-in-out; /* Slow hover transitions */
+  position: relative;
+  overflow: hidden;
+}
+
+.wellness-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Thematic card variations */
+.wellness-card.calmness {
+  border-top: 4px solid var(--calmness);
+}
+
+.wellness-card.empathy {
+  border-top: 4px solid var(--empathy);
+}
+
+.wellness-card.hope {
+  border-top: 4px solid var(--hope);
+}
+
+.wellness-card.wellness {
+  border-top: 4px solid var(--wellness);
+}
+
+.wellness-card.connection {
+  border-top: 4px solid var(--connection);
+}
+
+.wellness-card.safety {
+  border-top: 4px solid var(--safety);
+}
+
+.wellness-card.balance {
+  border-top: 4px solid var(--balance);
+}
+
+.wellness-card .icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.wellness-card h3 {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.wellness-card p {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Buttons with calming design */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-default);
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(168, 230, 207, 0.4); /* Subtle glow effect */
+}
+
+/* Thematic button variations */
+.btn-calmness {
+  background-color: var(--calmness);
+  color: #01579b;
+}
+
+.btn-empathy {
+  background-color: var(--empathy);
+  color: #880e4f;
+}
+
+.btn-hope {
+  background-color: var(--hope);
+  color: #0d47a1;
+}
+
+.btn-wellness {
+  background-color: var(--wellness);
+  color: #1b5e20;
+}
+
+.btn-connection {
+  background-color: var(--connection);
+  color: #4a148c;
+}
+
+.btn-safety {
+  background-color: var(--safety);
+  color: #e65100;
+}
+
+.btn-balance {
+  background-color: var(--balance);
+  color: #212121;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Spacing for button groups */
+.mt-5 .btn {
+  margin-top: var(--spacing-sm);
+}
+
+.ms-3 {
+  margin-left: var(--spacing-md);
+}
+
+/* Form elements with calming design */
+.form-control {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--input-background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: var(--transition-default);
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(53, 92, 125, 0.2);
+}
+
+/* Reduced stimulation for form elements */
+.form-control::-webkit-input-placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.7;
+}
+
+.form-control::-moz-placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.7;
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.7;
+}
+
+/* Responsive container with purposeful whitespace */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-2xl);
+  }
+}
+
+/* Fade-in and slide-up animations */
+.fade-in-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Healing-focused layout utilities */
+.space-y-lg > * + * {
+  margin-top: var(--spacing-xl);
+}
+
+.space-y-xl > * + * {
+  margin-top: var(--spacing-2xl);
+}
+
+.space-y-3xl > * + * {
+  margin-top: var(--spacing-3xl);
+}
+
+/* Soft divider for sections */
+.divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Wellness icons */
+.icon-large {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
 }
