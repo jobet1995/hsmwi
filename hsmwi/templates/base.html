@@ -27,6 +27,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/hsmwi.css' %}">
         <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'icons/bootstrap-icons.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
 
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
@@ -36,6 +37,8 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {% include 'home/navbar.html' %}
+
         <div class="container section-padding">
             {% block content %}{% endblock %}
         </div>
@@ -44,6 +47,8 @@
         <script type="text/javascript" src="{% static 'js/hsmwi.js' %}"></script>
         <script src="{% static 'js/jquery.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/navbar.js' %}"></script>
+        
 
         {% block extra_js %}
         {# Override this in templates to add extra javascript #}
